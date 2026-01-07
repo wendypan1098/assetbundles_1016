@@ -1,0 +1,16 @@
+resources:
+  jobs:
+    ingestion_job_0106:
+      name: ingestion_job_0106
+      tasks:
+        - task_key: ingestion_0106
+          notebook_task:
+            # notebook_path: /Workspace/Users/wendypan1098@gmail.com/assetbundles_1016/dabproject_0106/src/notebooks_0106/ingestion_0106.ipynb
+            notebook_path: ../../src/notebooks_0106/ingestion_0106.ipynb
+            base_parameters:
+              #catalog_name: assetbundles_1016
+              catalog_name: ${var.catalog_name}
+            source: WORKSPACE
+      queue:
+        enabled: true
+      performance_target: PERFORMANCE_OPTIMIZED
