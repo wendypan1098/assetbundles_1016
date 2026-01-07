@@ -1,0 +1,17 @@
+resources:
+  pipelines:
+    pipeline_demopipeline_0106ok:
+      name: demoPipeline_0106ok
+      libraries:
+        - glob:
+            include: ../../src/pipelines/demoPipeline_0106ok/transformations/**
+            #include: /Workspace/Users/wendypan1098@gmail.com/assetbundles_1016/dabproject_0106/src/pipelines/demoPipeline_0106ok/transformations/**
+      schema: bronze
+      continuous: false
+      development: false
+      photon: true
+      channel: CURRENT
+      catalog: ${var.catalog_name}
+      serverless: true
+      root_path: ../../src/pipelines/demoPipeline_0106ok
+      #root_path: /Workspace/Users/wendypan1098@gmail.com/assetbundles_1016/dabproject_0106/src/pipelines/demoPipeline_0106ok
